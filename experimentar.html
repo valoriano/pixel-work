@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experimentar IA — PixelWork</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="container">
+    <div class="logo">PixelWork<span class="ia">AI</span></div>
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Início</a></li>
+        <li><a href="solicitar.html">Solicitar</a></li>
+        <li><a href="orcamento.html">Orçamento</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<section class="section" style="padding-top:120px;">
+  <div class="container">
+    <h2>Gerador de Imagens com IA</h2>
+    <p>Descreva a imagem desejada com máximo detalhe.</p>
+
+    <form id="geradorForm">
+      <textarea id="prompt" placeholder="Exemplo: Um carro esportivo futurista em Luanda à noite, luz neon azul, ultra realista, 8K" required></textarea>
+      <button type="submit" class="btn-primary">Gerar via WhatsApp</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 PixelWork — Criatividade + IA</p>
+</footer>
+
+<script>
+document.getElementById("geradorForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const texto = document.getElementById("prompt").value;
+  const numero = "244912345678";
+  const mensagem = encodeURIComponent("Olá PixelWork, quero gerar esta imagem:\n\n" + texto);
+  window.open("https://wa.me/" + numero + "?text=" + mensagem, "_blank");
+});
+</script>
+
+</body>
+        </html>
